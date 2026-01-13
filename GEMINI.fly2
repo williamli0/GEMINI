@@ -1,0 +1,74 @@
+beamEnergy = 100 -- KE RANGES FROM 100-2500 eV
+particles {
+  -- MASS = u
+  -- CHARGE = e
+  -- KE = eV
+  -- VECTOR(X,Y,Z) = mm
+  -- TOB = usec
+  coordinates = 0,
+
+  -- +1 IONS
+  standard_beam {
+    n = 200,
+    tob = 0,
+    mass = 1.007276466812,
+    charge = 1,
+    ke = beamEnergy,
+    cwf = 1,
+    color = 1,
+    direction = cone_direction_distribution {
+      axis = vector(1, 0, 0),
+      half_angle = 12.6,
+      fill = true
+    },
+    position = vector(1, 50, 50)
+  },
+  -- NEUTRALS
+  standard_beam {
+    n = 200,
+    tob = 0,
+    mass = 1.007276466812,
+    charge = 0,
+    ke = beamEnergy,
+    cwf = 1,
+    color = 2,
+    direction = cone_direction_distribution {
+      axis = vector(1, 0, 0),
+      half_angle = 12.6,
+      fill = true
+    },
+    position = vector(1, 50, 50)
+  },
+  -- -1 IONS
+  standard_beam {
+    n = 200,
+    tob = 0,
+    mass = 1.007276466812,
+    charge = -1,
+    ke = beamEnergy,
+    cwf = 1,
+    color = 3,
+    direction = cone_direction_distribution {
+      axis = vector(1, 0, 0),
+      half_angle = 12.6,
+      fill = true
+    },
+    position = vector(1, 50, 50)
+  },
+  -- SECONDARY ELECTRONS
+  standard_beam {
+    n = 100,
+    tob = 0,
+    mass = 0.00054857990946,
+    charge = -1,
+    ke = 2.1,
+    cwf = 1,
+    color = 5,
+    direction = cone_direction_distribution {
+      axis = vector(1, 0, 0),
+      half_angle = 12.6,
+      fill = true
+    },
+    position = vector(1, 50, 50)
+  }
+}
