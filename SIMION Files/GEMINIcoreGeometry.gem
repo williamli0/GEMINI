@@ -1,0 +1,63 @@
+; Define a PA 151mm long in x (direction of beam), 101mm in y and z
+pa_define(151, 101, 101,planar,none,e,1)
+
+; Origin is located to the leftmost edge of the PA in the center of the left plane
+
+; HELPFUL COMMANDS
+; cylinder(xc, yc, zc, rx, ry, length) ; Always extends in z
+; box3d(xmin, ymin, zmin, xmax, ymax, zmax)
+; locate(x,y,z,scale,az,el,rt) { }
+; pa_define(nx, ny, nz, Sym, Mirror, Type, ng)
+
+; Manual: https://simion.com/manual/full/chapi.html?chap-gem
+
+; Must first rotate the origin by 270 degrees (x out of page, y up, z left)
+; Purpose: To create cylindrical shapes because cylinders extend in z
+locate(0,50,50,1,270){
+  ; e(1) = MCP front plate. Ground. 0V
+  e(1){
+    fill{
+      within{cylinder(0,0,-80,20,,1)}
+    }
+  }
+
+  ; e(2) = MCP back plate. 2000V in reality. 0V in SIMION
+  e(2){
+    fill{
+      within{cylinder(0,0,-83,20,,11)}
+    }
+  }
+
+  ; e(3) = Carbon foil 0V
+  e(3){
+    fill{
+      within{cylinder(0,0,0,7,,0)}
+    }
+  }
+}
+
+; Reset rotation of origin to 0 so x right, y up, z out of page
+locate(0,50,50,1,0){
+  ; e(4) = North Deflector Plate +V
+  e(4){
+    fill{
+      within{box3d(67,-28,-7,74,28,-26)}
+      notin{box3d(67,-24,-11,74,24,-26)}
+    }
+  }
+  ; e(5) = South Deflector Plate. -V
+  e(5){
+    fill{
+      within{box3d(67,-28,7,74,28,26)}
+      notin{box3d(67,-24,11,74,24,26)}
+    }
+  }
+  ; e(6) = Slit plate. Ground. 0V
+  e(6){
+    fill{
+      within{box3d(60,-36,-25,61,36,25)}
+      notin{box3d(60,-22,0,61,22,0)}
+    }
+  }
+
+}
