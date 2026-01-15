@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<segmentData xmlns='http://www.solidworks.com/segmentData'>
+    <segment ID='1'>
+        <properties>
+            <Name value='CPoint1@Cable_2-GEMINI-00-00-00.SLDASM:JP2@Cable_2-GEMINI-00-00-00'/>
+            <FromCompID value='0'/>
+            <ToCompID value='0'/>
+            <FromConnectionPoint value=''/>
+            <ToConnectionPoint value=''/>
+            <FromComponentRef value=''/>
+            <ToComponentRef value='JP2'/>
+            <Length value='0.059692'/>
+            <AdditionalLength value='0.059692'/>
+            <FromLocation value='0.033125,-0.004699,-0.015077'/>
+            <ToLocation value='0.048034,-0.039444,-0.048770'/>
+            <MaxDiameter value='0.000000'/>
+            <Diameter value='0.001000'/>
+            <Comment value='No Comments'/>
+            <Coverings value='&quot;Delrin 2700 NC010, Low Viscosity Acetal Copolymer (SS)&quot;'/>
+        </properties>
+    </segment>
+</segmentData>
