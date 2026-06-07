@@ -1,0 +1,20 @@
+autoinc=0 
+savedata=0 
+mpafmt=csv
+sephead=1 
+fmt=csv
+mpacaluse=0
+smoothpts=5 
+[MAP0] a_1 x a_2
+range=16384
+active=6603
+param=10000
+xdim=128
+xoffset=0
+yoffset=0
+caloff=0.000000
+calfact=1.000000
+calfact2=0
+calfact3=0
+calunit=
+caluse=0 
