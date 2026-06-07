@@ -1,0 +1,5 @@
+pa_define(150, 150, 150, planar, non-mirrored)
+
+locate(10){include(aperture)}
+locate(75){include(scatterAngle)}
+locate(100){include(esa)}

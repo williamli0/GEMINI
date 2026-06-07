@@ -1,0 +1,25 @@
+pa_define(50, 50, 50, planar, none, e, 10)
+locate(25, 25, 47) {
+  e(0) {
+    fill {
+      within {
+        cent_box3d(0, 0, 0, 50, 50, 3) ; x1=25, y1=25, z1=47
+      }
+      notin {
+        cylinder(0, 0, 3, 12, 12, 6)
+      }
+    }
+  }
+}
+locate(25, 25, 0) {
+  e(0) {
+    fill {
+      within {
+        cent_box3d(0, 0, 0, 50, 50, 3) ; x1=25, y1=25, z1=0
+      }
+      notin {
+        cylinder(0, 0, 3, 12, 12, 6)
+      }
+    }
+  }
+}

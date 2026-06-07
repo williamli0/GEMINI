@@ -1,0 +1,56 @@
+pa_define(151, 101, 101,planar,none,e,1)
+locate(0,50,50,1,270){ ;Lmax = 85
+; README
+; PA is centered 151 long in x (direction of beam), 101 in y and z
+; Origin is located to the leftmost edge of the PA in the center of the left plane
+; Origin is also rotated 270 so that in XY view: +x is out of the page, +y is up, and +z points left
+  ; e(1) = MCP front plate. Ground. 0V
+  e(1){
+    fill{
+      within{cylinder(0,0,-85,20,,1)}
+    }
+  }
+  ; e(2) = MCP back plate. 2000V
+  e(2){
+    fill{
+      within{cylinder(0,0,-88,20,,11)}
+    }
+  }
+  ; e(3) = MCP ring. +75V. Commented out for now to troubleshoot MCP
+  ;e(3){
+  ;  fill{
+  ;    within{cylinder(0,0,-80,25,,3)}
+  ;    notin{cylinder(0,0,-80,20,,3)}
+  ;  }
+  ;}
+  ; e(4) = ESA. -250V. Use 0V to isolate MCP
+  e(4){
+    fill{
+      within{box3d(15,-28,-74,34,28,-67)}
+      notin{box3d(19,-24,-74,34,24,-67)}
+    }
+  }
+  ; e(5) = Slit plate. Ground. 0V
+  e(5){
+    fill{
+      within{box3d(-25,-36,-61,25,36,-60)}
+      ;within{box3d(-25,-36,-60,-24,36,-30)} ;Tested making the plate longer
+      ;within{box3d(25,-36,-60,24,36,-30)} ;Tested making the plate longer
+      ;within{box3d(-50,-50,-61,50,50,-58)} ;Tested making the plate longer
+      notin{box3d(0,-22,-61,0,22,-60)}
+    }
+  }
+  ; e(6) = Carbon foil 0V
+  e(6){
+    fill{
+      within{cylinder(0,0,0,7,,0)}
+    }
+  }
+  ; e(7) = ESA2. 0V. For symmetry in the potential field.
+  e(7){
+    fill{
+      within{box3d(-15,-28,-74,-34,28,-67)}
+      notin{box3d(-19,-24,-74,-34,24,-67)}
+    }
+  }
+}

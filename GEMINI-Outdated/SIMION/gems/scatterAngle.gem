@@ -1,0 +1,8 @@
+locate(0,0,0) {
+ electrode(0) {
+  fill {
+   within{box(0,25,25,3,-25,25)} ;50x50x3
+   notin{box(0,1,20,3,-1,20)} ;slit
+  }
+ }
+}

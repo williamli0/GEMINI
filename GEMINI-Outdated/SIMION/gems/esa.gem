@@ -1,0 +1,13 @@
+locate(0,0,0) {
+ electrode(2000) {
+  fill {
+   within{cylinder(0,25,50,6,,100)}
+   ;x,y,zstart,rx,ry,zlength
+  }
+ }
+ electrode(-2000) {
+  fill {
+   within{cylinder(0,-25,50,6,,100)}
+  }
+ }
+}

@@ -1,0 +1,8 @@
+locate(0,0,0) {
+	electrode(2500) {
+		fill {
+			;within()
+			;notin()
+		}
+	}
+}

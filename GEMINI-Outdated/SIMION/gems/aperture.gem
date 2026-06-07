@@ -1,0 +1,17 @@
+pa_define(50, 50, 50,planar,none,e,10)
+locate(25,25,47) {
+ electrode(0) {
+  fill {
+   within{centered_box3d(0,0,0,50,50,3)} ;50x50x3
+   notin{cylinder(0,0,3,12,12,6)} ;1 in diam
+  }
+ }
+}
+locate(25,25,0) {
+ electrode(0) {
+  fill {
+   within{centered_box3d(0,0,0,50,50,3)} ;50x50x3
+   notin{cylinder(0,0,3,12,12,6)} ;1 in diam
+  }
+ }
+}
