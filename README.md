@@ -2,7 +2,7 @@ In the SolidWorks folder, GEMINI-00-00-00.SLDASM is the master file that should 
 
 Getting around:
 
-Final reports ("GEMINI-Fall_JP_CORRECTED.pdf" and "WilliamLiMAE399Spring2026Report_File.pdf") and PDR ("Fall 2025 GEMINI PDR.pdf") can be found in "GEMINI-Documents"
+Final reports ("GEMINI-Fall_JP_CORRECTED.pdf" and "WilliamLiMAE399Spring2026Report_File.pdf"), PDR ("Fall 2025 GEMINI PDR.pdf"), and a scan of my engineering notebook ("GEMINI-Notebook") can be found in "GEMINI-Documents"
 
 GEMINI-MATLAB contains the data processing file for GEMINI data: "GEMINIDataPipeline.m"
 
